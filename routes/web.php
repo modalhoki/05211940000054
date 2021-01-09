@@ -6,6 +6,7 @@ use App\Http\Controllers\pegawaiController;
 use App\Http\Controllers\tabelController;
 use App\Http\Controllers\relationController;
 use App\Http\Controllers\githubController;
+use App\Http\Controllers\bajuController;
 
 
 /*
@@ -24,6 +25,9 @@ use App\Http\Controllers\githubController;
     return view('welcome');
 });
 */
+Route::get('/welcome', function() {
+    return view('welcome');
+});
 
 Route::get('coba', function() {
     return "Halo";
@@ -127,3 +131,18 @@ Route::get('github/pegawai/edit/{id}',[githubController::class, 'editPegawai']);
 Route::post('github/pegawai/edit/update',[githubController::class, 'updatePegawai']);
 
 Route::get('github/pegawai/hapus/{id}',[githubController::class, 'hapusPegawai']);
+
+//baju
+Route::get('baju',[bajuController::class, 'home']);
+
+Route::get('baju/tambah',[bajuController:: class, 'tambah']);
+
+Route::post('baju/add',[bajuController:: class, 'add']);
+
+Route::get('baju/edit/{kode}',[bajuController::class, 'edit']);
+
+Route::post('baju/edit/update',[bajuController:: class, 'update']);
+
+Route::get('baju/hapus/{kode}',[bajuController::class, 'delete']);
+
+Route::get('baju/cari',[bajuController::class, 'cari']);
