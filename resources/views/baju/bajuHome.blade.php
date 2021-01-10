@@ -36,7 +36,7 @@
 	Data Per Halaman : {{ $vartabel->perPage() }} <br/>
  
  
-	{{ $vartabel->links() }}
+	{!! $vartabel->links('pagination::bootstrap-4') !!}
   </div>
 
   @endsection

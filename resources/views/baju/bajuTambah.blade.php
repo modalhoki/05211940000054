@@ -4,7 +4,7 @@
 
 <form action="add" class="was-validated" method="post">
     {{ csrf_field() }}
-  <div class="form-group">
+  <div class="form-group pt-3">
     <label for="uname">Merk Baju</label>
     <input type="text" class="form-control" id="brand" placeholder="e.g. : Giordano" name="merk" required>
     <div class="valid-feedback">Valid.</div>
