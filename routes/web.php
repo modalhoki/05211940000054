@@ -7,6 +7,7 @@ use App\Http\Controllers\tabelController;
 use App\Http\Controllers\relationController;
 use App\Http\Controllers\githubController;
 use App\Http\Controllers\bajuController;
+use App\Http\Controllers\easController;
 
 
 /*
@@ -146,3 +147,12 @@ Route::post('baju/edit/update',[bajuController:: class, 'update']);
 Route::get('baju/hapus/{kode}',[bajuController::class, 'delete']);
 
 Route::get('baju/cari',[bajuController::class, 'cari']);
+
+//EAS
+Route::get('eas',[easController::class, 'home']);
+
+Route::get('eas/tambah',[easController:: class, 'tambah']);
+
+Route::post('eas/add',[easController:: class, 'add']);
+
+Route::get('eas/hapus/{nrp}',[easController::class, 'delete']);
