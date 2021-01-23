@@ -8,6 +8,7 @@ use App\Http\Controllers\relationController;
 use App\Http\Controllers\githubController;
 use App\Http\Controllers\bajuController;
 use App\Http\Controllers\easController;
+use App\Http\Controllers\DwikiController;
 
 
 /*
@@ -156,3 +157,18 @@ Route::get('eas/tambah',[easController:: class, 'tambah']);
 Route::post('eas/add',[easController:: class, 'add']);
 
 Route::get('eas/hapus/{nrp}',[easController::class, 'delete']);
+
+//dwiki
+Route::get('dwiki',[DwikiController::class, 'home']);
+
+Route::get('dwiki/tambah',[DwikiController:: class, 'tambah']);
+
+Route::post('dwiki/add',[DwikiController:: class, 'add']);
+
+Route::get('dwiki/edit/{id}',[DwikiController::class, 'edit']);
+
+Route::post('dwiki/edit/update',[DwikiController:: class, 'update']);
+
+Route::get('dwiki/hapus/{id}',[DwikiController::class, 'delete']);
+
+Route::get('dwiki/cari',[DwikiController::class, 'cari']);
